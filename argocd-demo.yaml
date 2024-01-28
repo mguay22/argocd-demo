@@ -1,9 +1,9 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  name: argocd-demo
   annotations:
     argocd-image-updater.argoproj.io/image-list: nginx
-  name: argocd-demo
   namespace: argocd
 spec:
   destination:
@@ -11,6 +11,8 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: argocd-demo
+    directory:
+      recursive: true
+    targetRevision: main
+    path: apps
     repoURL: https://github.com/mguay22/argocd-demo
-    targetRevision: HEAD
