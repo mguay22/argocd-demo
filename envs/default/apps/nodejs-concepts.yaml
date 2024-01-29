@@ -5,6 +5,7 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/image-list: default=mguay22/nodejs-concepts:latest
     argocd-image-updater.argoproj.io/default.update-strategy: digest
+    argocd-image-updater.argoproj.io/write-back-method: git
   namespace: argocd
 spec:
   destination:
