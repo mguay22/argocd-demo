@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx
+  name: nodejs-concepts
   annotations:
-    argocd-image-updater.argoproj.io/image-list: nginx
+    argocd-image-updater.argoproj.io/image-list: mguay22/nodejs-concepts
   namespace: argocd
 spec:
   destination:
-    namespace: nginx
+    namespace: nodejs-concepts
     server: https://kubernetes.default.svc
   project: default
   syncPolicy:
@@ -18,5 +18,5 @@ spec:
       - CreateNamespace=true
   source:
     targetRevision: main
-    path: apps/nginx
+    path: apps/nodejs-concepts
     repoURL: https://github.com/mguay22/argocd-demo
