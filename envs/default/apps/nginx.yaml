@@ -11,7 +11,11 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   syncPolicy:
-    - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
   source:
     directory:
       recursive: true
