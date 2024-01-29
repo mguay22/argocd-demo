@@ -12,7 +12,6 @@ spec:
   project: default
   syncPolicy:
     - CreateNamespace=true
-    - automated: {}
   source:
     directory:
       recursive: true

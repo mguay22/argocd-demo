@@ -16,4 +16,3 @@ spec:
     repoURL: https://github.com/mguay22/argocd-demo
   syncPolicy:
     - CreateNamespace=true
-    - automated: {}
