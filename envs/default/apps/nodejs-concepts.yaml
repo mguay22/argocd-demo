@@ -3,8 +3,7 @@ kind: Application
 metadata:
   name: nodejs-concepts
   annotations:
-    argocd-image-updater.argoproj.io/image-list: default=mguay22/nodejs-concepts
-    argocd-image-updater.argoproj.io/default.update-strategy: latest
+    argocd-image-updater.argoproj.io/image-list: mguay22/nodejs-concepts:latest
   namespace: argocd
 spec:
   destination:
