@@ -10,6 +10,9 @@ spec:
     namespace: nginx
     server: https://kubernetes.default.svc
   project: default
+  syncPolicy:
+    - CreateNamespace=true
+    - automated: {}
   source:
     directory:
       recursive: true
