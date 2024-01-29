@@ -17,8 +17,6 @@ spec:
     syncOptions:
       - CreateNamespace=true
   source:
-    directory:
-      recursive: true
     targetRevision: main
     path: apps/nginx
     repoURL: https://github.com/mguay22/argocd-demo
